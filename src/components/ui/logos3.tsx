@@ -23,7 +23,6 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-    heading = "Trusted by these companies",
     logos = [],
 }: Logos3Props) => {
     return (
