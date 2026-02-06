@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import TextAnimation from './ui/scroll-text'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,9 +35,12 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-medium mb-6 text-primary">
-            Let's create something <span className="text-accent-rose italic">timeless.</span>
-          </h2>
+          <TextAnimation
+            text="Let's create something timeless."
+            as="h2"
+            classname="text-4xl md:text-5xl font-serif font-medium mb-6 text-primary"
+            letterAnime={true}
+          />
           <p className="text-xl text-primary/60 max-w-2xl mx-auto font-sans">
             Ready to start? We are waiting to hear your story.
           </p>

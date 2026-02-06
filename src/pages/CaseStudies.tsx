@@ -38,6 +38,15 @@ const projects = [
         year: "2024",
         tags: ["Rebranding", "3D Motion", "Web"],
         color: "#565449" // Olive
+    },
+    {
+        id: "mimzer",
+        title: "Mimzer",
+        category: "Artisanal Tea Brand",
+        description: "Revolutionizing the Indian tea experience. We crafted a digital presence that positions Mimzer as a gateway to mindful rituals, celebrating artisanal blends and 'The Brewers' behind them.",
+        year: "2025",
+        tags: ["Strategy", "E-commerce", "Identity"],
+        color: "#E6E6FA"
     }
 ]
 

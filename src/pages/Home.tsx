@@ -1,18 +1,28 @@
 import Hero from '../components/Hero'
-import TechStack from '../components/TechStack'
-import Services from '../components/Services'
 import Projects from '../components/Projects'
+import Services from '../components/Services'
+import TechStack from '../components/TechStack'
 import Contact from '../components/Contact'
+import Brands from '../components/Brands'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
     return (
-        <>
+        <main>
             <Hero />
-            <Services />
+            <div id="services">
+                <Services />
+            </div>
+            <Brands />
             <TechStack />
-            <Projects />
-            <Contact />
-        </>
+            <div id="projects">
+                <Projects />
+            </div>
+            <Testimonials />
+            <div id="contact">
+                <Contact />
+            </div>
+        </main>
     )
 }
 

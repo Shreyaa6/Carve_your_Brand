@@ -14,6 +14,8 @@ import CaseStudyDetail from './pages/CaseStudyDetail'
 import BrandGuidelines from './pages/BrandGuidelines'
 import DevelopmentStandards from './pages/DevelopmentStandards'
 import BlogPost from './pages/BlogPost'
+import TestimonialsPage from './pages/TestimonialsPage'
+import ContactPage from './pages/ContactPage'
 import ScrollToTop from './components/ScrollToTop'
 
 import Work from './pages/Work'
@@ -22,8 +24,8 @@ import Services from './pages/Services'
 function App() {
   return (
     <Router>
-      <ScrollToTop />
       <ReactLenis root options={{ lerp: 0.08 }}>
+        <ScrollToTop />
         <div className="App flex flex-col min-h-screen">
           <Navbar />
           <Routes>
@@ -33,9 +35,11 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/about" element={<About />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/security" element={<Security />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:id" element={<CaseStudyDetail />} />
             <Route path="/brand-guidelines" element={<BrandGuidelines />} />

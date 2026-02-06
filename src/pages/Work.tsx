@@ -30,6 +30,13 @@ const projects = [
         category: "AI Technology",
         year: "2024",
         color: "#565449"
+    },
+    {
+        id: "mimzer",
+        title: "Mimzer",
+        category: "Artisanal Tea Brand",
+        year: "2025",
+        color: "#E6E6FA" // A slight lavender/off-white tone
     }
 ]
 

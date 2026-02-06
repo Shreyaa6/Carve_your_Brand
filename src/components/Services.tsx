@@ -23,7 +23,7 @@ const Services = () => {
                 We build digital <span className="italic text-accent-rose">legacies.</span>
               </h1>
               <p className="text-xl md:text-2xl font-sans text-primary/60 max-w-2xl mx-auto">
-                Scroll to explore our crafts 👇
+                Scroll to explore our crafts
               </p>
             </div>
           </section>

@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12 mb-32">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12 mb-32">
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([key, section]) => (
@@ -66,13 +66,13 @@ const Footer = () => {
           ))}
 
           {/* CTA Column */}
-          <div className="flex flex-col gap-4 lg:items-start pt-8 lg:pt-0">
-            <a href="/#contact" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
+          <div className="flex flex-col gap-4 lg:items-end pt-8 lg:pt-0">
+            <Link to="/contact" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
               Start Project
-            </a>
-            <a href="/#contact" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
+            </Link>
+            <Link to="/contact" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
               Book a Demo
-            </a>
+            </Link>
           </div>
         </div>
 
