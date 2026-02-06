@@ -136,16 +136,16 @@ const Contact = () => {
                 <div className="flex items-start">
                   <div>
                     <h4 className="font-bold text-xs uppercase tracking-widest text-primary/40 mb-2">Email</h4>
-                    <a href="mailto:hello@carveyourbrand.com" className="text-xl text-primary font-serif italic hover:text-accent-rose transition-colors">
-                      hello@carve.com
+                    <a href="mailto:carveyourbrand.agency@gmail.com" className="text-xl text-primary font-serif italic hover:text-accent-rose transition-colors">
+                      carveyourbrand.agency@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div>
                     <h4 className="font-bold text-xs uppercase tracking-widest text-primary/40 mb-2">Phone</h4>
-                    <a href="tel:+1234567890" className="text-xl text-primary font-serif italic hover:text-accent-rose transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+918679144515" className="text-xl text-primary font-serif italic hover:text-accent-rose transition-colors">
+                      +91 8679144515
                     </a>
                   </div>
                 </div>

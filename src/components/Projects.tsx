@@ -136,17 +136,17 @@ function Card({ i, title, description, image, video, link, color, progress, rang
           scale,
           top: `calc(-5vh + ${i * 30}px)`,
         }}
-        className="flex flex-col relative -top-[25%] h-[520px] md:h-[560px] w-[92%] max-w-6xl rounded-xl lg:p-10 sm:p-6 p-4 origin-top shadow-2xl"
+        className="flex flex-col relative -top-[10%] md:-top-[25%] h-[580px] md:h-[560px] w-[92%] max-w-6xl rounded-xl lg:p-10 sm:p-6 p-4 origin-top shadow-2xl"
       >
-        <h3 className="text-3xl md:text-4xl text-center font-serif italic text-primary font-medium tracking-wide">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl text-center font-serif italic text-primary font-bold tracking-wide">
           {title}
         </h3>
-        <div className="flex flex-1 mt-5 gap-6 md:gap-10 min-h-0">
-          <div className="w-full md:w-[40%] relative top-[10%] flex flex-col">
-            <p className="text-sm md:text-base text-primary/80 leading-relaxed">
+        <div className="flex flex-col md:flex-row flex-1 mt-5 gap-6 md:gap-10 min-h-0">
+          <div className="w-full md:w-[40%] relative md:top-[10%] flex flex-col">
+            <p className="text-sm md:text-base text-primary/80 leading-relaxed line-clamp-4 md:line-clamp-none">
               {description}
             </p>
-            <span className="flex items-center gap-2 pt-4 mt-8">
+            <span className="flex items-center gap-2 pt-4 mt-4 md:mt-8">
               <a
                 href={link}
                 target="_blank"
@@ -170,7 +170,7 @@ function Card({ i, title, description, image, video, link, color, progress, rang
               </svg>
             </span>
           </div>
-          <div className="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden flex-shrink-0 bg-black/20">
+          <div className="relative w-full md:w-[60%] flex-1 min-h-[200px] md:h-full rounded-lg overflow-hidden flex-shrink-0 bg-black/20">
             <motion.div className="w-full h-full absolute inset-0" style={{ scale: imageScale }}>
               {video ? (
                 <video
@@ -178,7 +178,7 @@ function Card({ i, title, description, image, video, link, color, progress, rang
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 >
                   <source src={video} type="video/mp4" />
                 </video>
@@ -186,7 +186,7 @@ function Card({ i, title, description, image, video, link, color, progress, rang
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               )}
             </motion.div>

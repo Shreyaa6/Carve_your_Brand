@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -6,23 +7,36 @@ const Footer = () => {
   const footerLinks = {
     products: {
       title: 'Products',
-      links: ['Website Design', 'Mobile Apps', 'Design Systems', 'Prototyping']
+      links: [
+        { name: 'Work', href: '/work' },
+        { name: 'Services', href: '/services' },
+        { name: 'Mobile Apps', href: '/services' },
+        { name: 'Prototyping', href: '/services' }
+      ]
     },
     solutions: {
       title: 'Solutions',
-      links: ['E-commerce', 'SaaS Platforms', 'CMS Integration', 'Marketing Sites']
+      links: [
+        { name: 'E-commerce', href: '/work' },
+        { name: 'SaaS Platforms', href: '/work' },
+        { name: 'CMS Integration', href: '/services' },
+        { name: 'Marketing Sites', href: '/services' }
+      ]
     },
     resources: {
       title: 'Resources',
-      links: ['Blog', 'Case Studies', 'Brand Guidelines', 'Development Standards']
-    },
-    developers: {
-      title: 'Developers',
-      links: ['Documentation', 'API Reference', 'Status', 'Open Source']
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Brand Guidelines', href: '/brand-guidelines' },
+        { name: 'Development Standards', href: '/development-standards' }
+      ]
     },
     company: {
       title: 'Company',
-      links: ['About', 'Careers', 'Partners', 'Legal']
+      links: [
+        { name: 'About', href: '/about' }
+      ]
     }
   }
 
@@ -41,10 +55,10 @@ const Footer = () => {
               </h4>
               <ul className="flex flex-col gap-3">
                 {section.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-white/80 hover:text-white transition-colors font-sans">
-                      {link}
-                    </a>
+                  <li key={link.name}>
+                    <Link to={link.href} className="text-sm text-white/80 hover:text-white transition-colors font-sans">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -53,10 +67,10 @@ const Footer = () => {
 
           {/* CTA Column */}
           <div className="flex flex-col gap-4 lg:items-start pt-8 lg:pt-0">
-            <a href="#" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
+            <a href="/#contact" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
               Start Project
             </a>
-            <a href="#" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
+            <a href="/#contact" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
               Book a Demo
             </a>
           </div>
@@ -75,9 +89,9 @@ const Footer = () => {
           {/* Legal / Copyright */}
           <div className="w-full lg:w-auto flex flex-col items-start lg:items-end gap-8 pb-4">
             <div className="flex flex-wrap gap-6 text-[10px] font-bold uppercase tracking-widest text-white/40">
-              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Security</a>
+              <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/security" className="hover:text-white transition-colors">Security</Link>
             </div>
             <div className="text-[10px] font-bold uppercase tracking-widest text-white/20">
               &copy; {currentYear} Carve Your Brand.

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -14,9 +15,9 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { name: 'Work', href: '#projects' },
-    { name: 'Services', href: '#services' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Work', href: '/work' },
+    { name: 'Services', href: '/services' },
+    { name: 'Blog', href: '/blog' },
   ]
 
   return (
@@ -31,28 +32,28 @@ const Navbar = () => {
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="relative group">
+          <Link to="/" className="relative group">
             <span className="text-2xl font-serif font-bold tracking-tight text-nav-muted">Carve Your Brand</span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cta-light transition-all duration-300 group-hover:w-full"></span>
-          </a>
+          </Link>
 
           {/* Center Links */}
           <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-nav-muted hover:text-white transition-colors duration-300"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Right: Let's Talk — dark pill, light grey text, subtle border */}
           <div className="hidden md:flex items-center gap-8">
             <a
-              href="#contact"
+              href="/#contact"
               className="px-8 py-3 bg-black/80 border border-white/15 text-nav-muted text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300"
             >
               Let's Talk
@@ -86,17 +87,17 @@ const Navbar = () => {
           >
             <div className="px-4 py-8 space-y-4 flex flex-col items-center">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-lg font-serif text-nav-muted"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 className="mt-4 px-8 py-3 bg-black/80 border border-white/15 text-nav-muted text-sm font-sans font-medium uppercase tracking-widest rounded-full"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
