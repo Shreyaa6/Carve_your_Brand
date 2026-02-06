@@ -1,114 +1,198 @@
-import { motion } from 'framer-motion'
+'use client'
 
-const Projects = () => {
-  // Placeholder projects - replace with your actual projects
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      category: 'Web Development',
-      description: 'A modern, scalable e-commerce solution with advanced features and seamless user experience.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      results: [
-        { metric: 'Conversion Rate', value: '3x', description: 'Increase' },
-        { metric: 'Revenue', value: '$2M+', description: 'Generated' }
-      ]
-    },
-    {
-      id: 2,
-      title: 'Mobile Banking App',
-      category: 'Mobile Development',
-      description: 'Secure, user-friendly mobile banking application with biometric authentication and real-time transactions.',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-      results: [
-        { metric: 'User Adoption', value: '85%', description: 'Within 3 months' },
-        { metric: 'App Rating', value: '4.8/5', description: 'App Store' }
-      ]
-    },
-    {
-      id: 3,
-      title: 'AI Customer Support',
-      category: 'AI Chatbots',
-      description: 'Intelligent chatbot system that handles customer inquiries 24/7 with 95% accuracy rate.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
-      results: [
-        { metric: 'Response Time', value: '<2s', description: 'Average' },
-        { metric: 'Satisfaction', value: '92%', description: 'Customer rating' }
-      ]
-    },
-    {
-      id: 4,
-      title: 'Healthcare Management System',
-      category: 'Web Solutions',
-      description: 'Comprehensive healthcare platform for patient management, appointments, and medical records.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
-      results: [
-        { metric: 'Efficiency', value: '60%', description: 'Time saved' },
-        { metric: 'Patients', value: '50K+', description: 'Served' }
-      ]
-    },
-    {
-      id: 5,
-      title: 'SaaS Dashboard Platform',
-      category: 'Web Development',
-      description: 'Advanced analytics dashboard with real-time data visualization and custom reporting features.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      results: [
-        { metric: 'User Engagement', value: '2.5x', description: 'Increase' },
-        { metric: 'Data Processing', value: '10M+', description: 'Records/day' }
-      ]
-    }
-  ]
+import { useRef } from 'react'
+import { useTransform, motion, useScroll, type MotionValue } from 'framer-motion'
+import eComVideo from '../assets/e_com.mp4'
+import bankVideo from '../assets/bank.mp4'
+import aiVideo from '../assets/ai.mp4'
+import healthVideo from '../assets/health.mp4'
+import saasVideo from '../assets/saas.mp4'
+
+const projects = [
+  {
+    title: 'E-Commerce Platform',
+    description:
+      'A modern, scalable e-commerce solution with advanced features and seamless user experience. Built for brands that demand performance and conversion.',
+    video: eComVideo,
+    link: '#',
+    color: '#ECE4DB', // Porcelain Blush
+  },
+  {
+    title: 'Mobile Banking App',
+    description:
+      'Secure, user-friendly mobile banking application with biometric authentication and real-time transactions. Trust and clarity at every tap.',
+    video: bankVideo,
+    link: '#',
+    color: '#C4A69B', // Rosewood Dust
+  },
+  {
+    title: 'AI Customer Support',
+    description:
+      'Intelligent chatbot system that handles customer inquiries 24/7 with high accuracy. Your team, amplified—without the wait.',
+    video: aiVideo,
+    link: '#',
+    color: '#B8AB9C', // Stone Linen
+  },
+  {
+    title: 'Healthcare Management System',
+    description:
+      'Comprehensive healthcare platform for patient management, appointments, and medical records. Built for care that scales.',
+    video: healthVideo,
+    link: '#',
+    color: '#CFC8BE', // Warm Parchment
+  },
+  {
+    title: 'SaaS Dashboard Platform',
+    description:
+      'Advanced analytics dashboard with real-time data visualization and custom reporting. Decisions, not guesswork.',
+    video: saasVideo,
+    link: '#',
+    color: '#BAB8A2', // Olive Mist
+  },
+]
+
+export default function Projects() {
+  const container = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  })
 
   return (
-    <section id="projects" className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-serif font-medium mb-4 text-primary">
-            Selected Work
-          </h2>
-          <p className="text-xl text-accent-stone max-w-2xl mx-auto font-sans">
-            A selection of our most passionate work.
-          </p>
-        </motion.div>
+    <section id="projects" className="relative w-full bg-background" ref={container}>
+      {/* Intro */}
+      <div className="relative h-[70vh] w-full grid place-content-center px-4">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-60"
+          style={{
+            background: 'linear-gradient(to right, #B8AB9C33 1px, transparent 1px), linear-gradient(to bottom, #B8AB9C33 1px, transparent 1px)',
+            backgroundSize: '54px 54px',
+            maskImage: 'radial-gradient(ellipse 60% 50% at 50% 0%, #ECE4DB 70%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 60% 50% at 50% 0%, #ECE4DB 70%, transparent 100%)',
+          }}
+        />
+        <h2 className="relative text-4xl md:text-5xl 2xl:text-6xl font-semibold text-center tracking-tight leading-[120%] font-display text-primary">
+          Selected work.
+          <br />
+          <span className="text-accent-stone">Scroll to explore.</span>
+        </h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group cursor-pointer"
-            >
-              <div className="relative h-[400px] overflow-hidden rounded-none mb-6 bg-surface">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500" />
-              </div>
-              <div>
-                <div className="flex justify-between items-baseline mb-2 border-b border-primary/10 pb-4 group-hover:border-accent-rose transition-colors duration-300">
-                  <h3 className="text-2xl font-serif font-medium text-primary">{project.title}</h3>
-                  <span className="text-sm font-sans font-bold uppercase tracking-widest text-accent-rose">{project.category}</span>
-                </div>
-                <p className="text-primary/70 font-sans line-clamp-2 mt-4">{project.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+      {/* Stacking cards */}
+      <div className="relative w-full">
+        {projects.map((project, i) => {
+          const targetScale = 1 - (projects.length - i) * 0.05
+          return (
+            <Card
+              key={`p_${i}`}
+              i={i}
+              title={project.title}
+              description={project.description}
+              video={project.video}
+              link={project.link}
+              color={project.color}
+              progress={scrollYProgress}
+              range={[i * 0.25, 1]}
+              targetScale={targetScale}
+            />
+          )
+        })}
       </div>
     </section>
   )
 }
 
-export default Projects
+interface CardProps {
+  i: number
+  title: string
+  description: string
+  image?: string
+  video?: string
+  link: string
+  color: string
+  progress: MotionValue<number>
+  range: [number, number]
+  targetScale: number
+}
+
+function Card({ i, title, description, image, video, link, color, progress, range, targetScale }: CardProps) {
+  const container = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'start start'],
+  })
+
+  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
+  const scale = useTransform(progress, range, [1, targetScale])
+
+  return (
+    <div
+      ref={container}
+      className="h-screen flex items-center justify-center sticky top-0"
+    >
+      <motion.div
+        style={{
+          backgroundColor: color,
+          scale,
+          top: `calc(-5vh + ${i * 30}px)`,
+        }}
+        className="flex flex-col relative -top-[25%] h-[520px] md:h-[560px] w-[92%] max-w-6xl rounded-xl lg:p-10 sm:p-6 p-4 origin-top shadow-2xl"
+      >
+        <h3 className="text-3xl md:text-4xl text-center font-serif italic text-primary font-medium tracking-wide">
+          {title}
+        </h3>
+        <div className="flex flex-1 mt-5 gap-6 md:gap-10 min-h-0">
+          <div className="w-full md:w-[40%] relative top-[10%] flex flex-col">
+            <p className="text-sm md:text-base text-primary/80 leading-relaxed">
+              {description}
+            </p>
+            <span className="flex items-center gap-2 pt-4 mt-8">
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline cursor-pointer text-primary font-medium hover:text-primary/80"
+              >
+                Let's talk
+              </a>
+              <svg
+                width="22"
+                height="12"
+                viewBox="0 0 22 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-primary"
+              >
+                <path
+                  d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+          <div className="relative w-full md:w-[60%] h-full rounded-lg overflow-hidden flex-shrink-0 bg-black/20">
+            <motion.div className="w-full h-full absolute inset-0" style={{ scale: imageScale }}>
+              {video ? (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src={video} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
