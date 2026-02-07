@@ -8,7 +8,7 @@ import Testimonials from '../components/Testimonials'
 
 const Home = () => {
     return (
-        <main>
+        <main className="w-full min-w-0">
             <Hero />
             <div id="services">
                 <Services />
