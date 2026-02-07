@@ -24,7 +24,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled
         ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-4'
         : 'bg-transparent py-8'
         }`}
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="relative group">
-            <span className={`text-3xl font-cursive font-bold lowercase transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-nav-muted'}`}>carveyourbrand</span>
+            <span className={`text-3xl font-cursive font-bold lowercase transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-surface'}`}>carveyourbrand</span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cta-light transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] hover:text-white transition-colors duration-300 ${isScrolled ? 'text-surface/80' : 'text-nav-muted'}`}
+                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] hover:text-white transition-colors duration-300 ${isScrolled ? 'text-surface/80' : 'text-surface'}`}
               >
                 {item.name}
               </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/contact"
-              className={`px-8 py-3 bg-black/80 border border-white/15 text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-nav-muted'}`}
+              className={`px-8 py-3 bg-black/80 border border-white/15 text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-surface'}`}
             >
               Let's Talk
             </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isScrolled ? 'text-surface' : 'text-nav-muted'}`}
+            className="md:hidden relative z-[102] p-2 text-white bg-white/10 backdrop-blur-md rounded-full border border-white/10 hover:bg-white/20 transition-all"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-lg font-serif text-nav-muted"
+                  className="text-lg font-serif text-surface"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -98,7 +98,7 @@ const Navbar = () => {
               ))}
               <Link
                 to="/contact"
-                className="mt-4 px-8 py-3 bg-black/80 border border-white/15 text-nav-muted text-sm font-sans font-medium uppercase tracking-widest rounded-full"
+                className="mt-4 px-8 py-3 bg-white/10 border border-white/15 text-surface text-sm font-sans font-medium uppercase tracking-widest rounded-full"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Let's Talk
