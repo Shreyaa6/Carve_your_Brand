@@ -16,11 +16,11 @@ const Home = () => {
             </div>
             <Brands />
             <TechStack />
+            <Showreel />
             <div id="projects">
                 <Projects />
             </div>
             <Testimonials />
-            <Showreel />
             <div id="contact">
                 <Contact />
             </div>

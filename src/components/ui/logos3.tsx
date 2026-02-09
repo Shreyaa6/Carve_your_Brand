@@ -42,9 +42,9 @@ const Logos3 = ({
                             {logos.map((logo) => (
                                 <CarouselItem
                                     key={logo.id}
-                                    className="flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+                                    className="flex basis-auto min-w-fit justify-center pl-0"
                                 >
-                                    <div className="mx-8 flex shrink-0 items-center justify-center">
+                                    <div className="mx-6 sm:mx-8 md:mx-12 flex shrink-0 items-center justify-center">
                                         <div className="opacity-50 hover:opacity-100 transition-opacity duration-300">
                                             {logo.image ? (
                                                 <img
@@ -53,7 +53,7 @@ const Logos3 = ({
                                                     className={logo.className}
                                                 />
                                             ) : (
-                                                <span className="text-xl md:text-2xl font-serif font-bold text-primary whitespace-nowrap">
+                                                <span className="text-base sm:text-xl md:text-2xl font-serif font-bold text-primary whitespace-nowrap">
                                                     {logo.text}
                                                 </span>
                                             )}

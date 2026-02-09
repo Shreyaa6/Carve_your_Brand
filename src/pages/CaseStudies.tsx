@@ -1,52 +1,63 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import TextAnimation from '../components/ui/scroll-text'
+import kiddo1 from '../assets/kiddo1.mov'
+import mimzerImg from '../assets/mimzer.png'
+import pulseVideo from '../assets/pulse.mov'
+import sgi1 from '../assets/sgi1.mov'
 
 const projects = [
     {
-        id: "lumina",
-        title: "Lumina",
-        category: "E-Commerce Experience",
-        description: "Redefining luxury retail with an immersive, sensorially-rich digital flagship store. We blended WebGL interactions with seamless commerce to create a shopping experience that feels like an art gallery.",
+        id: "sri-gangotri-industries",
+        title: "Sri Gangotri Industries",
+        category: "Agriculture & Agro Products",
+        description: "Establishing a professional digital identity for a well-established agriculture-focused enterprise operating across 4+ Indian states, with 50+ registered products and ₹5 Crore annual revenue.",
         year: "2024",
-        tags: ["Strategy", "UX/UI", "WebGL", "Development"],
-        color: "#E8E6E1" // Light greige
+        tags: ["Digital Strategy", "Brand Positioning", "Website Development"],
+        color: "#565449",
+        media: {
+            type: "video",
+            src: sgi1
+        }
     },
     {
-        id: "apex-finance",
-        title: "Apex Finance",
-        category: "FinTech Platform",
-        description: "Transforming complex financial data into clarity. We designed a trading dashboard that reduces cognitive load while maximizing information density, proving that enterprise tools can be beautiful.",
-        year: "2023",
-        tags: ["Product Design", "Design Systems", "React"],
-        color: "#1A1A1A" // Dark
+        id: "kiddo",
+        title: "Kiddo",
+        category: "Digital Platform",
+        description: "A comprehensive digital platform designed to enhance user experience with innovative solutions and seamless interactions.",
+        year: "2024",
+        tags: ["Strategy", "UX/UI", "Development"],
+        color: "#E8E6E1",
+        media: {
+            type: "video",
+            src: kiddo1
+        }
     },
     {
-        id: "vantage",
-        title: "Vantage",
-        category: "Real Estate Brand",
-        description: "A digital identity for a ultra-luxury property developer. We utilized cinematic storytelling and fluid transitions to evoke the feeling of walking through their spaces before they were even built.",
-        year: "2023",
+        id: "pulse",
+        title: "Pulse",
+        category: "Digital Experience",
+        description: "Creating a dynamic and engaging digital experience that resonates with modern audiences through innovative design and technology.",
+        year: "2024",
         tags: ["Branding", "Web Design", "Motion"],
-        color: "#D8CFBC" // Bone
-    },
-    {
-        id: "nexus",
-        title: "Nexus",
-        category: "AI Technology",
-        description: "Visualizing the invisible. For this AI startup, we created a brand language based on generative patterns and fluid data streams, establishing them as the humane face of machine intelligence.",
-        year: "2024",
-        tags: ["Rebranding", "3D Motion", "Web"],
-        color: "#565449" // Olive
+        color: "#D8CFBC",
+        media: {
+            type: "video",
+            src: pulseVideo
+        }
     },
     {
         id: "mimzer",
         title: "Mimzer",
-        category: "Artisanal Tea Brand",
-        description: "Revolutionizing the Indian tea experience. We crafted a digital presence that positions Mimzer as a gateway to mindful rituals, celebrating artisanal blends and 'The Brewers' behind them.",
+        category: "D2C / FMCG (Tea & Wellness)",
+        description: "Launching a conversion-ready D2C e-commerce tea brand, building trust and credibility for a new brand competing in a competitive market with 4 specialty tea variants.",
         year: "2025",
-        tags: ["Strategy", "E-commerce", "Identity"],
-        color: "#E6E6FA"
+        tags: ["D2C E-commerce", "Brand Positioning", "Website Development"],
+        color: "#E6E6FA",
+        media: {
+            type: "image",
+            src: mimzerImg
+        }
     }
 ]
 
@@ -95,11 +106,29 @@ const CaseStudies = () => {
                                         className="absolute inset-0 transition-transform duration-700 group-hover:scale-105 bg-cover bg-center"
                                         style={{ backgroundColor: project.color }}
                                     >
-                                        {/* Placeholder visual pattern */}
-                                        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/noise.png')]"></div>
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <span className="text-[10rem] font-serif text-primary/5 font-italic">{index + 1}</span>
-                                        </div>
+                                        {project.media?.type === "video" ? (
+                                            <video
+                                                src={project.media.src}
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                className="w-full h-full object-cover"
+                                            />
+                                        ) : project.media?.type === "image" ? (
+                                            <img
+                                                src={project.media.src}
+                                                alt={project.title}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        ) : (
+                                            <>
+                                                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/noise.png')]"></div>
+                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                    <span className="text-[10rem] font-serif text-primary/5 font-italic">{index + 1}</span>
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 </Link>
                             </motion.div>

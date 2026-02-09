@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,17 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const isLightBackgroundRoute = [
+    /^\/work/,
+    /^\/services/,
+    /^\/blog/,
+    /^\/about/,
+    /^\/case-studies/,
+    /^\/brand-guidelines/,
+    /^\/development-standards/,
+    /^\/contact/,
+  ].some((r) => r.test(location.pathname))
 
   const navItems = [
     { name: 'Work', href: '/work' },
@@ -33,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="relative group">
-            <span className={`text-3xl font-cursive font-bold lowercase transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-surface'}`}>carveyourbrand</span>
+            <span className={`text-3xl font-cursive font-bold lowercase transition-colors duration-300 ${isScrolled ? 'text-surface' : isLightBackgroundRoute ? 'text-primary' : 'text-surface'}`}>carveyourbrand</span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cta-light transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
@@ -43,7 +55,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] hover:text-white transition-colors duration-300 ${isScrolled ? 'text-surface/80' : 'text-surface'}`}
+                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] hover:text-white transition-colors duration-300 ${isScrolled ? 'text-surface/80' : isLightBackgroundRoute ? 'text-primary' : 'text-surface'}`}
               >
                 {item.name}
               </Link>
@@ -52,12 +64,14 @@ const Navbar = () => {
 
           {/* Right: Let's Talk — dark pill, light grey text, subtle border */}
           <div className="hidden md:flex items-center gap-8">
-            <Link
-              to="/contact"
-              className={`px-8 py-3 bg-black/80 border border-white/15 text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300 ${isScrolled ? 'text-surface' : 'text-surface'}`}
+            <a
+              href="https://calendly.com/carveyourbrand-agency/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-8 py-3 bg-black/80 border border-white/15 text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300 ${isScrolled ? 'text-surface' : isLightBackgroundRoute ? 'text-primary' : 'text-surface'}`}
             >
               Let's Talk
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,13 +110,15 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                to="/contact"
+              <a
+                href="https://calendly.com/carveyourbrand-agency/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 px-8 py-3 bg-white/10 border border-white/15 text-surface text-sm font-sans font-medium uppercase tracking-widest rounded-full"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Let's Talk
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

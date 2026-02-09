@@ -31,7 +31,7 @@ const Hero = () => {
               key={i}
               text={word}
               as="div"
-              classname="text-[12vw] leading-[0.85] font-serif font-medium tracking-tighter text-hero-heading text-center"
+              classname="text-[12vw] leading-[0.85] font-serif font-medium tracking-tighter text-surface text-center"
               variants={{
                 hidden: { filter: 'blur(10px)', opacity: 0, y: 20 },
                 visible: {
@@ -53,7 +53,7 @@ const Hero = () => {
           <TextAnimation
             text="We engineer digital experiences that captivate, convert, and leave a mark."
             as="p"
-            classname="text-xl md:text-2xl font-sans text-nav-muted font-medium leading-relaxed"
+            classname="text-xl md:text-2xl font-sans text-surface font-medium leading-relaxed"
             variants={{
               hidden: { filter: 'blur(4px)', opacity: 0, y: 20 },
               visible: {

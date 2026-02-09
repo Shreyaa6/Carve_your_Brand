@@ -8,13 +8,15 @@ import aiVideo from '../assets/ai.mp4'
 import healthVideo from '../assets/health.mp4'
 import saasVideo from '../assets/saas.mp4'
 
+const CALENDLY_LINK = 'https://calendly.com/carveyourbrand-agency/30min'
+
 const projects = [
   {
     title: 'E-Commerce Platform',
     description:
       'A modern, scalable e-commerce solution with advanced features and seamless user experience. Built for brands that demand performance and conversion.',
     video: eComVideo,
-    link: '#',
+    link: CALENDLY_LINK,
     color: '#ECE4DB', // Porcelain Blush
   },
   {
@@ -22,7 +24,7 @@ const projects = [
     description:
       'Secure, user-friendly mobile banking application with biometric authentication and real-time transactions. Trust and clarity at every tap.',
     video: bankVideo,
-    link: '#',
+    link: CALENDLY_LINK,
     color: '#C4A69B', // Rosewood Dust
   },
   {
@@ -30,7 +32,7 @@ const projects = [
     description:
       'Intelligent chatbot system that handles customer inquiries 24/7 with high accuracy. Your team, amplified—without the wait.',
     video: aiVideo,
-    link: '#',
+    link: CALENDLY_LINK,
     color: '#B8AB9C', // Stone Linen
   },
   {
@@ -38,7 +40,7 @@ const projects = [
     description:
       'Comprehensive healthcare platform for patient management, appointments, and medical records. Built for care that scales.',
     video: healthVideo,
-    link: '#',
+    link: CALENDLY_LINK,
     color: '#CFC8BE', // Warm Parchment
   },
   {
@@ -46,7 +48,7 @@ const projects = [
     description:
       'Advanced analytics dashboard with real-time data visualization and custom reporting. Decisions, not guesswork.',
     video: saasVideo,
-    link: '#',
+    link: CALENDLY_LINK,
     color: '#BAB8A2', // Olive Mist
   },
 ]
