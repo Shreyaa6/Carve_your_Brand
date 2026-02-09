@@ -5,6 +5,7 @@ import TechStack from '../components/TechStack'
 import Contact from '../components/Contact'
 import Brands from '../components/Brands'
 import Testimonials from '../components/Testimonials'
+import Showreel from '../components/Showreel'
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                 <Projects />
             </div>
             <Testimonials />
+            <Showreel />
             <div id="contact">
                 <Contact />
             </div>
