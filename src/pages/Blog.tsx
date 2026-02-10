@@ -3,28 +3,28 @@ import { Link } from 'react-router-dom'
 
 const blogPosts = [
     {
-        id: 1,
-        title: "The Future of Digital Branding",
-        excerpt: "How AI and immersive technologies are reshaping the way brands connect with audiences.",
-        date: "Feb 12, 2026",
+        id: 4,
+        title: "Why Most Digital Products Fail — And It Has Nothing to Do With Code",
+        excerpt: "Products rarely fail because of code. They fail because they were built without clarity.",
+        date: "Feb 10, 2026",
         category: "Insights",
-        image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop"
+        image: "https://i.pinimg.com/736x/4f/6e/37/4f6e37adec5834503ecc891b47b789ff.jpg"
     },
     {
-        id: 2,
-        title: "Minimalism in UI Design",
-        excerpt: "Why less is more when it comes to user experience and conversion rates.",
-        date: "Jan 28, 2026",
-        category: "Design",
-        image: "https://images.unsplash.com/photo-1545239351-ef35f43d5143?q=80&w=1000&auto=format&fit=crop"
+        id: 5,
+        title: "From Idea to Impact: How We Design Digital Products That Scale",
+        excerpt: "Scalability isn’t added later — it’s designed from day one with clarity, UX simplicity, and modular systems.",
+        date: "Feb 10, 2026",
+        category: "Insights",
+        image: "https://i.pinimg.com/1200x/24/1e/52/241e521caa67fb5ec8a2a269f9030e39.jpg"
     },
     {
-        id: 3,
-        title: "Building Scalable Systems",
-        excerpt: "A technical deep dive into architecture patterns that support rapid growth.",
-        date: "Jan 15, 2026",
-        category: "Engineering",
-        image: "https://images.unsplash.com/photo-1558494949-efdeb6bf80c1?q=80&w=1000&auto=format&fit=crop"
+        id: 6,
+        title: "Trust Is the Most Underrated Growth Strategy in Digital Products",
+        excerpt: "In a world crowded with apps and promises, the products that grow are the ones users trust enough to return to.",
+        date: "Feb 10, 2026",
+        category: "Insights",
+        image: "https://i.pinimg.com/1200x/5d/ad/e0/5dade02cc4a2fe002d57a2f72ae7b362.jpg"
     }
 ]
 

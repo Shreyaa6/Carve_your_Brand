@@ -55,7 +55,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] hover:text-white transition-colors duration-300 ${isScrolled ? 'text-surface/80' : isLightBackgroundRoute ? 'text-primary' : 'text-surface'}`}
+                className={`text-xs font-sans font-bold uppercase tracking-[0.2em] transition-colors duration-300 ${isScrolled ? 'text-surface/80 hover:text-white' : isLightBackgroundRoute ? 'text-primary hover:text-accent-olive' : 'text-surface hover:text-white'}`}
               >
                 {item.name}
               </Link>

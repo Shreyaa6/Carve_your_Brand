@@ -5,31 +5,31 @@ const services = [
     {
         title: "Digital Product Design",
         description: "We craft intuitive and beautiful interfaces that users love. From complex dashboards to consumer mobile apps.",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop", // Abstract Fluid Blue/Dark
+        image: "https://i.pinimg.com/1200x/90/64/1a/90641ace9ca2a3ccfa5bc2cb18493de1.jpg", // Abstract Fluid Blue/Dark
         tags: ["UI/UX", "Design Systems", "Prototyping"]
     },
     {
         title: "Web & Mobile Engineering",
         description: "Building robust, scalable applications using cutting-edge technologies like React, React Native, and Node.js.",
-        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000&auto=format&fit=crop", // Dark tech workspace/team
+        image: "https://i.pinimg.com/1200x/40/95/44/4095445cd5857806151b596ca919e068.jpg", // Dark tech workspace/team
         tags: ["React / Next.js", "React Native", "TypeScript"]
     },
     {
         title: "AI & Machine Learning",
         description: "Integrating intelligence into your products. Predictive analytics, NLP, and generative AI solutions.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop", // AI Generative Dark
+        image: "https://i.pinimg.com/736x/1d/29/71/1d2971755908f5a340f4b4b3f63a6efd.jpg", // AI Generative Dark
         tags: ["LLM Integration", "Predictive Models", "Data Pipelines"]
     },
     {
         title: "Brand Strategy",
         description: "Defining who you are. We build cohesive brand systems that communicate your unique value.",
-        image: "https://images.unsplash.com/photo-1507842217121-ad0773cf4a0f?q=80&w=2000&auto=format&fit=crop", // Dark Water/Ripple
+        image: "https://i.pinimg.com/1200x/39/82/37/39823780443a2f7b9fd233e20e842799.jpg", // Dark Water/Ripple
         tags: ["Identity", "Tone of Voice", "Guidelines"]
     },
     {
         title: "Brand Marketing",
         description: "Amplifying your voice. We create data-driven campaigns that build community, drive engagement, and convert curiosity into loyalty.",
-        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2000&auto=format&fit=crop", // Business/Strategy abstract
+        image: "https://i.pinimg.com/1200x/40/20/ba/4020ba256865587ff1d803a96575d3ca.jpg", // Business/Strategy abstract
         tags: ["Social Media", "Content Creation", "Growth"]
     }
 ]
