@@ -67,12 +67,12 @@ const Footer = () => {
 
           {/* CTA Column */}
           <div className="flex flex-col gap-4 lg:items-end pt-8 lg:pt-0">
-            <Link to="/contact" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
+            <a href="https://calendly.com/carveyourbrand-agency/30min" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#E3DACD] text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors text-center w-full lg:w-auto">
               Start Project
-            </Link>
-            <Link to="/contact" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
+            </a>
+            <a href="https://calendly.com/carveyourbrand-agency/30min" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-transparent border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors text-center w-full lg:w-auto">
               Book a Demo
-            </Link>
+            </a>
           </div>
         </div>
 

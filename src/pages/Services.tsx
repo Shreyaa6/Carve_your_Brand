@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import TextAnimation from '../components/ui/scroll-text'
 
 const services = [
@@ -136,9 +135,9 @@ const Services = () => {
 
                         <div className="relative z-10 flex flex-col items-center">
                             <h3 className="text-4xl font-serif text-white mb-6 italic">Ready to start?</h3>
-                            <Link to="/contact" className="px-10 py-5 bg-[#D8CFBC] text-[#11120D] rounded-full font-serif text-sm font-bold uppercase tracking-widest hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg glow">
+                            <a href="https://calendly.com/carveyourbrand-agency/30min" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-[#D8CFBC] text-[#11120D] rounded-full font-serif text-sm font-bold uppercase tracking-widest hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg glow">
                                 Book a Demo
-                            </Link>
+                            </a>
                         </div>
                     </motion.div>
                 </div>

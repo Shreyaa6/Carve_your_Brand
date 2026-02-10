@@ -1,37 +1,34 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import TextAnimation from './ui/scroll-text'
+import sgii from '../assets/sgii.jpg'
+import kid from '../assets/kid.png'
+import mim from '../assets/mim.png'
 
 const testimonials = [
     {
-        quote: "Carve Your Brand didn't just redesign our website; they reimagined our entire digital identity. The result is nothing short of breathtaking.",
-        author: "Sarah Jenkins",
-        role: "CMO, Lumina Lighting",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+        quote: "Working with carveyourbrand was a genuinely collaborative experience. They didn’t just focus on creating a digital presence; they invested time in understanding the scale, compliance needs, and operational realities of our agriculture business. The outcome reflects our credibility, product strength, and multi-state operations in a way that aligns with how we work on the ground.",
+        author: "Sri Gangotri Industries",
+        role: "CEO — Agriculture & Government Supply",
+        image: sgii
     },
     {
-        quote: "The attention to detail is obsessive in the best possible way. Every animation, every pixel serves a purpose. A true partner in growth.",
-        author: "David Chen",
-        role: "Founder, Apex Finance",
-        image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&auto=format&fit=crop"
+        quote: "As a founder, I was looking for clarity and direction more than anything else. carveyourbrand helped us shape Mimzer into a brand that feels authentic, premium, and trustworthy from day one. They understood our competitive landscape and built an e-commerce experience that allows us to grow with confidence rather than rush into scale.",
+        author: "Mimzer",
+        role: "CEO — D2C E‑commerce Tea Brand",
+        image: mim
     },
     {
-        quote: "They managed to capture the essence of our luxury real estate brand and translate it into a digital experience that feels as premium as our properties.",
-        author: "Elena Rodriguez",
-        role: "Director, Vantage",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop"
+        quote: "Building a quick commerce platform requires more than speed—it requires thoughtful product decisions. carveyourbrand approached Kiddo as a complete ecosystem, carefully designing both the consumer and rider experiences. Their attention to trust, usability, and operational flow made a real difference in how the product came together.",
+        author: "Kiddo",
+        role: "CEO — Quick Commerce · Baby & Mother Care",
+        image: kid
     },
     {
-        quote: "Working with this team was seamless. They understood our vision for AI humanization and delivered a brand language that is both tech-forward and warm.",
-        author: "James Wilson",
-        role: "CEO, Nexus AI",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
-    },
-    {
-        quote: "From concept to launch, the process was transparent and collaborative. The final product exceeded our expectations in every metric.",
-        author: "Priya Patel",
-        role: "Founder, Mimzer",
-        image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=200&auto=format&fit=crop"
+        quote: "For Pulse, we needed a partner who understood both journalism and technology. carveyourbrand delivered a platform that gives us full control over content, subscriptions, and analytics while keeping the reader experience clean and focused. Their work has helped us confidently transition into a digital‑first news operation.",
+        author: "Pulse",
+        role: "CEO — Subscription‑Based News Platform",
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=200&auto=format&fit=crop"
     }
 ]
 

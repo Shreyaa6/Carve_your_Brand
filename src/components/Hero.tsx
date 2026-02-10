@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import videoBg from '../assets/a.mp4'
+import videoBg from '../assets/b.mp4'
 import TextAnimation from './ui/scroll-text'
 
 const Hero = () => {
@@ -74,7 +74,9 @@ const Hero = () => {
           transition={{ delay: 1.2 }}
         >
           <a
-            href="#contact"
+            href="https://calendly.com/carveyourbrand-agency/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-cta-light text-primary rounded-full font-serif text-lg tracking-wide hover:bg-white/90 transition-colors duration-300"
           >
             Start a Project

@@ -68,7 +68,7 @@ const Navbar = () => {
               href="https://calendly.com/carveyourbrand-agency/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-8 py-3 bg-black/80 border border-white/15 text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300 ${isScrolled ? 'text-surface' : isLightBackgroundRoute ? 'text-primary' : 'text-surface'}`}
+              className="px-8 py-3 bg-black/80 border border-white/15 text-white text-sm font-sans font-bold uppercase tracking-[0.2em] rounded-full hover:bg-white/10 hover:text-white hover:border-white/25 transition-colors duration-300"
             >
               Let's Talk
             </a>

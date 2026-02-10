@@ -175,7 +175,7 @@ const CaseStudies = () => {
                         as="h3"
                         classname="text-4xl font-serif text-primary mb-6"
                     />
-                    <a href="/#contact" className="inline-block bg-primary text-background px-8 py-4 rounded-full font-serif text-lg hover:bg-primary/90 transition-colors">
+                    <a href="https://calendly.com/carveyourbrand-agency/30min" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-background px-8 py-4 rounded-full font-serif text-lg hover:bg-primary/90 transition-colors">
                         Let's build it together
                     </a>
                 </div>
