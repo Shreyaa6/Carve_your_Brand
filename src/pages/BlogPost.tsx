@@ -3,6 +3,43 @@ import { useParams, Link } from 'react-router-dom'
 import TextAnimation from '../components/ui/scroll-text'
 
 const blogData = {
+    '1': {
+        title: "The Future of Digital Branding",
+        subtitle: "How AI and immersive technologies are reshaping connection.",
+        date: "Feb 12, 2026",
+        category: "Insights",
+        image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop",
+        content: `
+            <p class="text-xl font-serif leading-relaxed mb-8 text-primary">
+                The static logo is dead. In an era of fluid interfaces and generative content, a brand's identity must be a living, breathing system.
+            </p>
+            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
+                For decades, consistency was the golden rule of branding. A logo had to look the same on a business card as it did on a billboard. But digital ecosystems are not static. They shift, adapt, and personalize.
+            </p>
+            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Generative Identity</h3>
+             <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
+                Imagine a brand mark that evolves based on the time of day, the user's location, or the tempo of the music they are listening to. This isn't science fiction; it's the current capability of WebGL and generative code.
+            </p>
+            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
+                We are moving from "Corporate Identity" to "Algorithmic Personality." The core DNA of the brand remains constant—typographic rules, color variables, motion behaviors—but the expression is infinite.
+            </p>
+        `
+    },
+    '2': {
+        title: "Minimalism in UI Design",
+        subtitle: "Why less is more when it comes to user experience.",
+        date: "Jan 28, 2026",
+        category: "Design",
+        image: "https://images.unsplash.com/photo-1545239351-ef35f43d5143?q=80&w=1000&auto=format&fit=crop",
+        content: `
+            <p class="text-xl font-serif leading-relaxed mb-8 text-primary">
+                Minimalism is not about the absence of elements, but the presence of focus.
+            </p>
+            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
+                Every element on a screen adds cognitive load. When we strip away the decorative, the redundant, and the noisy, we leave room for the user to think, decide, and act.
+            </p>
+         `
+    },
     '4': {
         title: "Why Most Digital Products Fail — And It Has Nothing to Do With Code",
         subtitle: "Success is built on clarity, not complexity.",
@@ -150,143 +187,6 @@ const blogData = {
             <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Final Thought</h3>
             <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
                 The difference between products that survive and products that scale is not ambition — it’s intention. At carveyourbrand, we don’t just build digital products. We design foundations strong enough to grow on. Build with carveyourbrand.
-            </p>
-        `
-    },
-    '6': {
-        title: "Trust Is the Most Underrated Growth Strategy in Digital Products",
-        subtitle: "Why trust, not tactics, is the real growth engine.",
-        date: "Feb 10, 2026",
-        category: "Insights",
-        image: "https://i.pinimg.com/1200x/5d/ad/e0/5dade02cc4a2fe002d57a2f72ae7b362.jpg",
-        content: `
-            <p class="text-xl font-serif leading-relaxed mb-8 text-primary">
-                Growth is often measured in numbers — users, downloads, revenue, engagement. But behind every metric lies something far more fragile and far more powerful: trust.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                In a world where users are overwhelmed with apps, platforms, and promises, trust is no longer a “nice to have.” It is the deciding factor between adoption and abandonment, loyalty and churn, growth and stagnation.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                At carveyourbrand, we’ve seen this repeatedly across industries — from e-commerce and quick commerce to news platforms and enterprise dashboards. The products that grow sustainably are not the loudest. They are the ones users feel safe returning to.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Why Users Don’t Trust Digital Products Anymore</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Modern users are cautious — and for good reason. They’ve experienced dark patterns, confusing interfaces, hidden charges, poor performance, and misleading promises.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                As a result, users judge products within seconds. They subconsciously ask:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-lg text-primary/70 leading-relaxed ml-4 mb-6">
-                <li>“Can I trust this?”</li>
-                <li>“Is this reliable?”</li>
-                <li>“Do they respect my time?”</li>
-                <li>“What happens if something goes wrong?”</li>
-            </ul>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                If your product fails to answer these questions clearly, users leave — often without feedback. Trust isn’t lost in big moments. It’s lost in small frictions.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Trust Is Designed, Not Claimed</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Many brands say they are trustworthy. Very few design for it. Trust is built through clarity over cleverness, transparency over persuasion, and consistency over novelty.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                From the first interaction to long-term usage, every design decision either strengthens or weakens trust. At carveyourbrand, we treat trust as a core design principle, not a marketing layer added at the end.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">How UX Directly Impacts Trust</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                User experience is where trust is felt most strongly. A product can lose trust through unclear navigation, too many decisions, unpredictable behavior, slow performance, or lack of feedback.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                On the other hand, trust grows when actions are clear, outcomes are predictable, errors are handled gracefully, and users feel in control.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Good UX doesn’t just make a product usable — it makes users confident. Confidence leads to usage. Usage leads to growth.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Trust in High-Stakes Digital Products</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Some products carry higher emotional and practical stakes than others. For example:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-lg text-primary/70 leading-relaxed ml-4 mb-6">
-                <li>E-commerce platforms handling payments and deliveries</li>
-                <li>News platforms shaping public understanding</li>
-                <li>Quick commerce apps promising speed and reliability</li>
-                <li>Dashboards managing sensitive data and workflows</li>
-            </ul>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                In these contexts, trust is non-negotiable. Users expect accuracy, reliability, ethical design, and accountability. Even a small breach — a misleading headline, a broken order flow, an unclear policy — can permanently damage credibility.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Designing for trust here isn’t optional. It’s foundational.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Transparency Builds Long-Term Loyalty</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Trust grows when products are honest. That means clear pricing, visible processes, understandable policies, and straightforward communication. Transparency reduces anxiety.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                When users know what’s happening, why it’s happening, and what to expect next, they feel respected — and respect is the foundation of loyalty.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                At carveyourbrand, we help clients design interfaces and systems that explain themselves, rather than hide complexity behind clever visuals.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Consistency Is the Silent Trust Builder</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Trust is reinforced through consistency: consistent language, consistent interactions, consistent performance. When products behave predictably, users relax. When they don’t, users stay alert — and alert users don’t trust easily.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Consistency isn’t boring. It’s reassuring. And reassurance is what keeps users coming back.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Trust Enables Growth Without Aggression</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Many products chase growth through aggressive notifications, forced engagement, or manipulative tactics. This may work short-term — but it erodes trust long-term.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Trust-driven products grow differently: through retention instead of acquisition pressure, through referrals instead of ads, through habit instead of hype. When users trust a product, growth becomes organic.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">How We Design Trust-First Products at carveyourbrand</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Our approach to trust is intentional and built into every stage of product design. We focus on clarity over complexity, user control over manipulation, honest communication, robust, reliable systems, and ethical UX decisions.
-            </p>
-            <p class="mb-4 text-lg text-primary/70 leading-relaxed font-sans">
-                We ask questions like:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-lg text-primary/70 leading-relaxed ml-4 mb-6">
-                <li>Does this reduce user anxiety?</li>
-                <li>Does this respect the user’s time?</li>
-                <li>Does this make the system easier to understand?</li>
-                <li>Does this earn trust or borrow it?</li>
-            </ul>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                These questions guide decisions far more than trends or shortcuts.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Trust Is a Long Game — And That’s the Point</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Trust cannot be rushed. It cannot be hacked. And it cannot be faked for long. But once earned, it compounds.
-            </p>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                Products built on trust survive market shifts, adapt to growth, and outlast competitors chasing quick wins.
-            </p>
-
-            <h3 class="text-2xl font-serif text-primary mt-12 mb-6">Final Thought</h3>
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                In the end, users don’t remember every feature. They remember how your product made them feel, whether it worked when they needed it, and whether they felt safe using it. Trust is not a feature. It is the experience.
-            </p>
-            <p class="mb-8 text-lg text-primary/70 leading-relaxed font-sans">
-                At carveyourbrand, we help brands and founders build digital products that users believe in — not just use.
-            </p>
-
-            <p class="mb-6 text-lg text-primary/70 leading-relaxed font-sans">
-                <strong class="text-primary">Build Products People Trust.</strong><br />
-                If you’re building a platform, app, or system where trust matters — let’s design it right.<br />
-                Build with carveyourbrand.
             </p>
         `
     },
